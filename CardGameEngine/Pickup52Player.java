@@ -7,8 +7,8 @@ public class Pickup52Player extends Player {
     super(name, new Pickup52Hand());
   }
 
-  public String playTurn(Deck52Traditional deck){
-    return "Pick up card";
+  public void playTurn(Deck52Traditional deck){
+    
   }
 
   public int cardCount() {

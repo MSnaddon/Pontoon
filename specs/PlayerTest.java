@@ -37,6 +37,12 @@ public class PlayerTest {
     assertEquals(2, hand.getCard(1).getRankInt());
   }
 
+  @Test
+  public void playersHandHasValue(){
+    player.playTurn(deck);
+    int handValue = PontoonGame.evaluateHand((PtoonHand) player.getHand());
+    assertEquals(13, handValue);
+  }
 
 
 

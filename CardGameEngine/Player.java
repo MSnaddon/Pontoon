@@ -5,7 +5,7 @@ public abstract class Player {
   protected String name;
   protected Hand hand;
   // Player must have ability to play a turn
-  public abstract String playTurn(Deck52Traditional deck);
+  public abstract void playTurn(Deck52Traditional deck);
 
   public Player( String name, Hand hand) {
     this.name = name;

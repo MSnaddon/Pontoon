@@ -12,11 +12,12 @@ public class PtoonPlayer extends Player {
     super(name, new PtoonHand());
   }
 
-  public String playTurn(Deck52Traditional deck){
+  public void playTurn(Deck52Traditional deck){
     getCardFromDeck(deck);
     getCardFromDeck(deck);
     int handValue = PontoonGame.evaluateHand((PtoonHand) hand);
-    return Integer.toString(handValue);
+
+
 
 
 
