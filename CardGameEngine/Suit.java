@@ -3,7 +3,7 @@ package cardGameEngine;
 public enum Suit{
 
   DIAMOND("Diamond"),
-  SPADE("Space"),
+  SPADE("Spade"),
   CLUB("Club"),
   HEART("Heart");
 

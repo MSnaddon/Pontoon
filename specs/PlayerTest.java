@@ -39,6 +39,8 @@ public class PlayerTest {
 
   @Test
   public void playersHandHasValue(){
+
+    deck.shuffle();
     player.playTurn(deck);
     int handValue = PontoonGame.evaluateHand((PtoonHand) player.getHand());
     assertEquals(13, handValue);
