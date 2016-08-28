@@ -2,7 +2,7 @@ require 'fileutils'
 
 def filter_directories
 
-  excluded_directories = ["bin"]
+  excluded_directories = ["bin","cardGame"]
 
   all_files = Dir.glob('*')
 

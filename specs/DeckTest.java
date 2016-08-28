@@ -1,25 +1,25 @@
-import static org.junit.Assert.*;
-import org.junit.*;
-import cardGame.*;
+// import static org.junit.Assert.*;
+// import org.junit.*;
+// import cardGame.*;
 
-public class DeckTest {
-  Deck testDeck;
-  Card aceOfSpacesMaybe;
+// public class DeckTest {
+//   Deck testDeck;
+//   Card aceOfSpacesMaybe;
 
-  @Before
-  public void before(){
-    testDeck = new Deck();
-    aceOfSpacesMaybe = new Card(Suit.SPADE, Value.ACE);
-  }
+//   @Before
+//   public void before(){
+//     testDeck = new Deck();
+//     aceOfSpacesMaybe = new Card(Suit.SPADE, Value.ACE);
+//   }
 
-  @Test
-  public void deckHas52Cards(){
-    assertEquals(52, testDeck.deck.size());
-  }
+//   @Test
+//   public void deckHas52Cards(){
+//     assertEquals(52, testDeck.deck.size());
+//   }
 
-  @Test
-  public void canGetCard(){
-    assertEquals(Suit.DIAMOND, testDeck.getCard(0).getSuit());
-  }
+//   @Test
+//   public void canGetCard(){
+//     assertEquals(Suit.DIAMOND, testDeck.getCard(0).getSuit());
+//   }
 
-}
+// }
