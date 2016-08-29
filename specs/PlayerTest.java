@@ -37,32 +37,13 @@ public class PlayerTest {
     assertEquals(2, hand.getCard(1).getRankInt());
   }
 
-  @Test
-  public void playersHandHasValue(){
-
-    deck.shuffle();
-    player.playTurn(deck);
-    int handValue = PontoonGame.evaluateHand((PtoonHand) player.getHand());
-    assertEquals(13, handValue);
-  }
-
-
-
-
+  // Test requires input
+  
   // @Test
-  // public void hasName() {
-  //   assertEquals( "Cardy McCardface", player.getName() );
-  // }
-
-  // @Test
-  // public void startsWithNoCasrds() {
-  //   assertEquals( 0, player.cardCount() );
-  // }
-
-  // @Test
-  // public void canGetCardFromDeck() {
-  //   player.getCardFromDeck(deck, 2);
-  //   assertEquals( 2, player.cardCount() );
+  // public void playersHandHasValue(){
+  //   player.playTurn(deck);
+  //   int handValue = PontoonGame.evaluateHand((PtoonHand) player.getHand());
+  //   assertEquals(13, handValue);
   // }
 
 }

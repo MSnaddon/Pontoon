@@ -59,7 +59,7 @@ public class PtoonPlayer extends Player {
   }
 
   public String askForTwist(){
-    System.out.println("Twist? (y = yes)");
+    System.out.println(this.name + " Twist? (y = yes)");
     Scanner scan = new Scanner(System.in);
     return scan.next();
   }

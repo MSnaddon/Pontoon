@@ -5,32 +5,21 @@ import cardGameEngine.*;
 
 public class GameTest{
 
-  PtoonPlayer dealer;
-  ArrayList<PtoonPlayer> players;
-  Deck52Traditional deck;
+  PontoonGame game;
 
 
   @Before
   public void before(){
-    dealer = new PtoonPlayer("Dealer");
-    PtoonPlayer player1 = new PtoonPlayer("Mutley");
-    PtoonPlayer player2 = new PtoonPlayer("Dasterdly");
-    deck = new Deck52Traditional();
-    players.add(player1);
-    players.add(player2);
+    this.game = new PontoonGame();
+
   }
 
-  @Test
-  public 
+
+  public void canAddPlayer(){
+    game.setup(); // will prompt for player name (enter one name and quit)
+    assertEquals(1, game.numberOfPlayers());
+  }
 
 
-
-
-
-
-
-
-
-
-
+  
 }

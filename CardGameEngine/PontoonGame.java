@@ -7,6 +7,7 @@ public class PontoonGame{
   private PtoonPlayer dealer;
   private ArrayList<PtoonPlayer> players;
 
+
   public static int evaluateHand(PtoonHand hand){
     int value = 0;
     boolean isAce = false;
@@ -33,36 +34,39 @@ public class PontoonGame{
   public void setup(){
     deck = new Deck52Traditional();
     dealer = new PtoonPlayer("Dealer");
+    players = new ArrayList<PtoonPlayer>();
     requestPlayers();
-    boolean done = false;
   }
 
   private void requestPlayers(){
     boolean done = false;
-    while (!done && players.size() > 0){
-      done = addPlayer();
-    }
+    do {
+      System.out.println("Please enter name of player, or 'q' if finished");
+      Scanner scan = new Scanner(System.in);
+      String name = scan.next();
+      if (name.equals("q")){
+        done = true;
+      }else{
+        this.players.add(new PtoonPlayer(name));
+      }
+    }while (!done);
   }
 
-  private boolean addPlayer(){
-    System.out.println("Please enter name of player, or 'Done!' if finished");
-    Scanner scan = new Scanner(System.in);
-    String name = scan.next();
-    if (name.equals("Done")){
-      return true;
-    }else{
-      this.players.add(new PtoonPlayer(name));
-      return false;
-    }
-  }
 
   public void gameLoop(){
     boolean runGame = false;
     do{
-      System.out.println("Game is being played");
-      
+
+      for (PtoonPlayer player : players){
+        player.playTurn(deck);
+      }
+      dealer.playTurn(deck);
+      threshold = dealer.getScore()
       
 
+      //calculate winner
+      
+    
 
       runGame = true;
     } while(runGame == false);
@@ -72,5 +76,9 @@ public class PontoonGame{
   }
   public void resetGame(){
     //present statitstics etc
+  }
+
+  public int numberOfPlayers(){
+    return players.size();
   }
 }
